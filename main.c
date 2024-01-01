@@ -26,7 +26,7 @@ struct node* BuildOneTwoThree(){
 void printNode(struct node* example){
 	struct node* temp = malloc(sizeof(struct node));
 	temp = example;
-	while(temp->data != NULL){
+	while(temp != NULL){
 		printf("Data: %d\n", temp->data);
 		temp = temp->next;
 
