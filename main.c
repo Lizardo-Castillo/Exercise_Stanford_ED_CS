@@ -23,17 +23,25 @@ struct node* BuildOneTwoThree(){
 	return head;
 }
 
-void printNode(struct node* example){
-	struct node* temp = malloc(sizeof(struct node));
-	temp = example;
-	while(temp != NULL){
-		printf("Data: %d\n", temp->data);
-		temp = temp->next;
-
+void printNode(struct node* head){
+	while(head){
+		printf("Data: %d\n", head->data);
+		head = head->next;
 	}
 }
+
+int Length(struct node* head){
+	int count = 0;
+	while(head){
+		count += 1;
+		head = head->next;
+	}
+	return count;
+}
+
 int main(){
 	struct node* head = BuildOneTwoThree();
 	printNode(head);
+	printf("Cantidad: %d\n", Length(head));
 	return 0;
 }
