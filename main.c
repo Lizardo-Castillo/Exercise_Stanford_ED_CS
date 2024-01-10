@@ -39,6 +39,16 @@ int Length(struct node* head){
 	return count;
 }
 
+int cont(strut node* head){
+	int cont = 0;
+	while(head){
+		cont++;
+		head = head -> next;
+	}
+	return 0;
+}
+
+
 int main(){
 	int a = 0;
 	struct node* head = BuildOneTwoThree();
