@@ -40,6 +40,7 @@ int Length(struct node* head){
 }
 
 int main(){
+	int a = 0;
 	struct node* head = BuildOneTwoThree();
 	printNode(head);
 	printf("Cantidad: %d\n", Length(head));
